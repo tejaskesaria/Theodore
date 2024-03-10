@@ -1,0 +1,160 @@
+*
+    box-sizing: border-box
+body
+    margin: 0
+    padding: 0
+@font-face
+    font-family: 'Okomito'
+    src: url('font/Okomito-Medium.otf'), url('fonts/Okomito-Medium.ttf') format('truetype')
+    font-weight: medium
+nav
+    position: fixed
+    top: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    background: #fff
+    z-index: 100
+    img
+        width: 50px
+        max-width: 100%
+.container
+    max-height: 100vh
+    overflow-y: scroll
+    border: 1px solid gray
+    scroll-snap-type: mandatory
+    scroll-snap-points-y: repeat(3rem)
+    scroll-snap-type: y mandatory
+.container
+    section
+        scroll-snap-align: start
+        height: 100vh
+        overflow: hidden
+        position: relative
+        text-align: center
+        // padding-top: 70px
+        a
+            position: absolute
+            bottom: 10px
+            display: block
+    .section1
+        display: flex
+        justify-content: center
+.content
+    background: #111
+    display: grid
+    place-items: center
+    text-align: center
+    *
+            font-family: 'Okomito', sans-serif
+    div
+        width: 90%
+        margin: 0 auto
+h1, h2, p
+     color: #fff
+h1
+    font-size: 3rem
+h2
+    font-size: 2.8rem
+p
+    font-size: 1.5rem
+input
+    color: #fff
+    background: transparent
+    width: 100%
+    border: 0
+    border-bottom: 1px solid #fff
+    margin: 15px 0
+    border-radius: 0
+    font-size: 1rem
+input:hover, input:focus
+    border: 0
+    border-bottom: 1px solid #fff
+    outline: 0
+form
+    width: 70%
+    margin: 10px auto
+input[type="submit"]
+    background: #fff
+    color: #111
+    border: 1px solid #fff
+    padding: 10px 15px
+    text-transform: capitalize
+    cursor: pointer
+    width: max-content
+.mouse
+    width: 50px
+    height: 90px
+    border: 3px solid #333
+    border-radius: 60px
+    position: relative
+    transform: scale(0.4)
+    z-index: 100
+    &::before
+        content: ''
+        width: 12px
+        height: 12px
+        position: absolute
+        top: 10px
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #333
+        border-radius: 50%
+        opacity: 1
+        animation: wheel 2s infinite
+        -webkit-animation: wheel 2s infinite
+.swiper-scrollbar-drag
+    background: #000
+.swiper-scrollbar
+    background: #fff
+@keyframes wheel
+    to
+        opacity: 0
+        top: 60px
+@-webkit-keyframes wheel
+    to
+        opacity: 0
+        top: 60px
+.swiper
+    width: max-content
+    height: 100%
+    img
+        max-width: 100%
+        aspect-ratio: 9/16
+        object-fit: cover
+.scrollmobile
+    color: #fff
+    font-size: 1rem
+    position: absolute
+    height: 100vh
+    z-index: 100
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: center
+    background: rgba(0,0,0,.4)
+    p
+        margin: 0
+        width: max-content
+    .downarrow
+        margin-left: 10px
+        animation: updown .8s  infinite alternate
+        -webkit-animation: updown .8s  infinite alternate 
+@keyframes updown
+    0%
+        transform: translateY(0)    
+    100%
+        transform: translateY(10px)
+@media screen and (max-width: 768px)
+    h1, h2
+        font-size: 1.4rem
+    p
+        font-size: 1rem
+        margin: 10px 0
+    .container section a
+        display: none
+    .swiper
+        img
+            height: max-content
+    .swiper-scrollbar
+      top: 80px
