@@ -2,7 +2,7 @@ const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
     // spaceBetween: 20,
     autoplay: {
-      delay: 3000
+      delay: 2000
     },
     scrollbar: {
       el: ".swiper-scrollbar",
