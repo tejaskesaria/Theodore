@@ -1,0 +1,3 @@
+deployment:
+  tasks:
+  - export DEPLOYPATH=/home/n9501w8w25y5/public_html/ 
